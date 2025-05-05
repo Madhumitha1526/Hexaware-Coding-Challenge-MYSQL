@@ -200,7 +200,7 @@ group by c.customer_id, name;
 -- 12. Number of orders placed by each customer --
 select o.customer_id, concat(c.first_name,'',c.last_name) as name, count(*) as order_count 
 from orders o
-join customers c on o.customer_id - c.customer_id
+join customers c on o.customer_id = c.customer_id
 group by o.customer_id, name;
 
 -- 13.Maxinmum order amount for each customer--
